@@ -27,7 +27,7 @@ const Main = () => {
             </p>
           </div>
           <div className="flex items-center gap-4 text-sm">
-            <button className="see-my-work-button relative border border-slate-500 px-4 py-2 rounded overflow-hidden bg-[#222222] transition ease-in-out bg-opacity-75 hover:bg-opacity-100 duration-300">
+            <button className="see-my-work-button relative border border-slate-500 px-4 py-2 rounded overflow-hidden bg-[#222222] bg-opacity-75 hover:bg-opacity-100 cursor-pointer">
               See My Work
             </button>
             <a href="" className="flex gap-2">

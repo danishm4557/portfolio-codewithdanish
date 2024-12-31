@@ -1,4 +1,4 @@
-import danishLogoBold from "../../../../public/danish-logo-bold.png";
+import danishLogoBold from "../../assets/danish-logo-bold.png";
 const Navigation = () => {
   return (
     <>
@@ -100,18 +100,16 @@ const Navigation = () => {
         </div>
       </div>
       {/* MOBILE SIDE-PANEL NAV */}
-      <div className="mobile-navigator fixed bg-black z-10 h-screen w-screen top-0 drawer transition-opacity duration-300 px-6 pt-44 space-y-1 flex flex-col gap-16">
-        <div className="flex flex-col gap-6 text-2xl">
-          <a href="">Experience</a>
-          <a href="">About Me</a>
-          <a href="">Projects</a>
+      <div className="mobile-navigator fixed bg-black h-screen w-screen top-0 drawer transition-opacity duration-300 px-6 pt-44 space-y-1 flex flex-col gap-16">
+        <div className="flex flex-col items-start text-2xl gap-6">
+          <button className="hover:text-zinc-400">Experience</button>
+          <button className="hover:text-zinc-400">About Me</button>
+          <button className="hover:text-zinc-400">Projects</button>
         </div>
         <div className="flex flex-col">
           <div className="flex flex-col gap-3">
             <span className="text-2xl text-zinc-400 tracking-widest">SAY HELLO</span>
-            <a href="mailto:danishm4557@gmail.com" className="text-lg">
-              danishm4557@gmail.com
-            </a>
+            <span className="text-lg">danishm4557@gmail.com</span>
           </div>
           <div className="flex gap-3 pt-2">
             <a
