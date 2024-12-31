@@ -7,6 +7,20 @@ body {
   background-color: #000;
 }
 
+/* ------- danish-logo-at-top-left-of-app ------- */
+@media screen and (max-width: 767px) {
+  .danish-logo-bold-image {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .danish-logo-bold-image {
+    width: 180px;
+  }
+}
+/* --------------------------------------------- */
+
 /* boxed-pattern-background */
 .main-home-landing-page-section {
   min-height: 100vh;
@@ -16,6 +30,8 @@ body {
     linear-gradient(to right, #3a3a3a 0.1px, #000 1px);
   background-size: 60px 60px;
   border: 0px;
+  z-index: 1;
+  position: relative;
 }
 
 /* dark-overlay-top */
@@ -28,6 +44,7 @@ body {
   top: 0;
   left: 0;
   border-radius: 5px;
+  z-index: 2;
 }
 
 /* dark-overlay-bottom */
@@ -139,5 +156,12 @@ body {
   100% {
     left: 130%;
   }
+}
+/* --------------------------------------------- */
+
+/* ------ button hover color transitions ------- */
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* --------------------------------------------- */
