@@ -2,7 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import shopLocalLogo from "../../assets/shop-local-logo.png";
 import generalAssemblyLogo from "../../assets/general-assembly-logo.png";
 import javaScriptLogo from "../../assets/javaScript-logo.png";
-import coldFusionLogo from "../../assets/ColdFusionLogo.png";
+import coldFusionLogo from "../../assets/coldFusionLogo.png";
 import jQueryLogo from "../../assets/jQuery-logo.png";
 import javaLogo from "../../assets/java-logo.svg";
 import mySQLLogo from "../../assets/mySQL-logo.jpg";
