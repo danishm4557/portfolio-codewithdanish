@@ -62,14 +62,14 @@ const Experience = () => {
       ([entry]) => {
         setShopLocalIsInView(entry.isIntersecting); // Checks if the element is in view
       },
-      { threshold: 0.3 } // Adjust threshold as needed
+      { threshold: 0.5 } // Adjust threshold as needed
     );
 
     const generalAssemblyObserver = new IntersectionObserver(
       ([entry]) => {
         setGeneralAssemblyIsInView(entry.isIntersecting); // Checks if the element is in view
       },
-      { threshold: 0.6 } // Adjust threshold as needed
+      { threshold: 0.5 } // Adjust threshold as needed
     );
 
     if (shopLocal) {
@@ -375,13 +375,6 @@ const Experience = () => {
                       </div>
                       <div className="flex items-center gap-3 rounded-lg bg-[#121212] p-2">
                         <img
-                          src={typeScriptLogo}
-                          className="h-8 w-8 sm:h-10 sm:w-10 lg:h-14 lg:w-14 object-cover"
-                        />
-                        <p className="text-lg">TypeScript</p>
-                      </div>
-                      <div className="flex items-center gap-3 rounded-lg bg-[#121212] p-2">
-                        <img
                           src={javaScriptLogo}
                           className="h-8 w-8 sm:h-10 sm:w-10 lg:h-14 lg:w-14 object-cover"
                         />
@@ -453,7 +446,7 @@ const Experience = () => {
               <p className="text-xl sm:text-2xl">Tech Stack</p>
               <div className="grid grid-cols-2 gap-3">
                 {techStackNames.map((item, index) => (
-                  <div className="flex items-center gap-3 rounded-lg bg-[#121212] p-2">
+                  <div className="flex items-center gap-3 rounded-lg bg-[#121212] p-2" key={index}>
                     <img
                       src={techStackImages[index]}
                       className="h-8 w-8 sm:h-10 sm:w-10 lg:h-14 lg:w-14 object-cover"
