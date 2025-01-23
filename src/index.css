@@ -36,7 +36,7 @@ html:has(input.menu-toggle:checked) {
     linear-gradient(to right, #3a3a3a 0.1px, #000 1px);
   background-size: 60px 60px;
   border: 0px;
-  z-index: 1;
+  z-index: 2;
   position: relative;
 }
 
@@ -210,8 +210,8 @@ html:has(input.menu-toggle:checked) {
 
 /* ---- parrallax star background animation ---- */
 .experience-section {
-  min-height: 100vh;
   position: relative;
+  z-index: 1;
 }
 
 .experience-section::before {
@@ -701,3 +701,8 @@ html:has(input.menu-toggle:checked) {
   }
 }
 /* --------------------------------------------- */
+
+.skills-section {
+  z-index: 2;
+  position: relative;
+}
