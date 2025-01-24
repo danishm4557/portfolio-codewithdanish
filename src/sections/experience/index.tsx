@@ -62,7 +62,7 @@ const Experience = () => {
       ([entry]) => {
         setShopLocalIsInView(entry.isIntersecting); // Checks if the element is in view
       },
-      { threshold: 0.5 } // Adjust threshold as needed
+      { threshold: 0.1 } // Adjust threshold as needed
     );
 
     const generalAssemblyObserver = new IntersectionObserver(

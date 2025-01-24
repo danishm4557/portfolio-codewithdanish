@@ -92,7 +92,7 @@ const Skills = () => {
             {skills.map((item, idx) => (
               <div
                 key={idx}
-                className="relative mx-auto flex h-[13rem] w-full max-w-full flex-col items-start border border-black/[0.2] p-4 dark:border-white/[0.2]"
+                className="relative mx-auto flex h-[13rem] w-full max-w-full flex-col items-start border p-4 border-white/[0.2]"
               >
                 <Icon className="absolute -left-3 -top-3 size-6 text-white" />
                 <Icon className="absolute -bottom-3 -left-3 size-6 text-white" />
