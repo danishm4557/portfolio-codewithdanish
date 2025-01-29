@@ -10,6 +10,7 @@
 // import mongoDBLogo from "../../assets/mongoDBLogo.svg";
 // import postgreSQLLogo from "../../assets/postgreSQLLogo.png";
 // import tailwindLogo from "../../assets/tailwindLogo.svg";
+import { motion } from "framer-motion";
 import { EvervaultCard, Icon } from "./evervault-card";
 import { FaReact, FaNodeJs } from "react-icons/fa";
 import {
@@ -77,8 +78,6 @@ const Skills = () => {
     },
   ];
 
-  console.log(SiPostgresql);
-
   return (
     <>
       <div className="skills-section bg-black">
@@ -88,9 +87,30 @@ const Skills = () => {
         >
           <p className="text-3xl sm:text-5xl md:text-6xl">Skills</p>
           {/* <div className={"grid grid-cols-1 gap-6  py-10 md:grid-cols-2 lg:grid-cols-3"}> */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full pt-10">
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ delay: 0.2, when: "beforeChildren", staggerChildren: 0.15 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full pt-10"
+          >
             {skills.map((item, idx) => (
-              <div
+              <motion.div
+                variants={{
+                  hidden: {
+                    x: -10,
+                    opacity: 0,
+                  },
+                  visible: {
+                    x: 0,
+                    opacity: 1,
+                  },
+                }}
+                transition={{ duration: 0.75 }}
                 key={idx}
                 className="relative mx-auto flex h-[13rem] w-full max-w-full flex-col items-start border p-4 border-white/[0.2]"
               >
@@ -100,9 +120,9 @@ const Skills = () => {
                 <Icon className="absolute -bottom-3 -right-3 size-6 text-white" />
 
                 <EvervaultCard text={item.title} icon={item.icon} />
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </div>
     </>
